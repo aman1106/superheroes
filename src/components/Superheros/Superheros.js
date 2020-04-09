@@ -58,29 +58,31 @@ class Superheros extends Component {
             <LoadingOutlined />Loading...
           </span> :
           <div className="page">
-            {this.state.selected ? <Hero hero={this.state.selectedHero} onBack={this.onBack}/> :
-            <Auxiliary>
-              <div className="searcharea">
-                <Search
-                  allowClear
-                  placeholder="Look for superhero"
-                  onSearch={this.handleSearch}
-                  onChange={(e) => this.handleSearch(e.target.value)}
-                  value={this.state.value}
-                  style={{ width: 200, marginTop: 10 }}
-                />
-              </div>
-              {this.state.names.length > 0 ?
-              <ul className="superheros">
-                {this.state.names.map((hero, index) => (
-                    <Superhero hero={hero} heroSelected={this.heroSelected}/>
-                  )
-                )}
-              </ul> :
-              <div className="nomatch">
-                <img src={nomatch} alt="nomatch" height="200" width="250"/>
-                Does your superhero really exists?
-              </div>}
+            {this.state.selected ?
+              <Hero hero={this.state.selectedHero} onBack={this.onBack}/> :
+              <Auxiliary>
+                <div className="searcharea">
+                  <Search
+                    allowClear
+                    placeholder="Look for superhero"
+                    onSearch={this.handleSearch}
+                    onChange={(e) => this.handleSearch(e.target.value)}
+                    value={this.state.value}
+                    style={{ width: 200, marginTop: 10 }}
+                  />
+                </div>
+                {this.state.names.length > 0 ?
+                  <ul className="superheros">
+                    {this.state.names.map((hero, index) => (
+                        <Superhero hero={hero} heroSelected={this.heroSelected}/>
+                      )
+                    )}
+                  </ul> :
+                  <div className="nomatch">
+                    <img src={nomatch} alt="nomatch" height="200" width="250"/>
+                    Does your superhero really exists?
+                  </div>
+                }
               </Auxiliary>
             }
           </div>
