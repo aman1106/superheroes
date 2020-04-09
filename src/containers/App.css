@@ -1,0 +1,122 @@
+@import "~antd/dist/antd.css";
+.App {
+  text-align: center;
+}
+
+.Card-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.loader {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.page {
+  position: relative;
+  text-align: center;
+}
+
+.searcharea {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  margin-top: 0px;
+  z-index: 99999;
+}
+
+.nomatch {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.superheros {
+  position: absolute;
+  top: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.superheros__item {
+  display: inline-flex;
+  margin: 10px;
+}
+
+.superhero {
+  display: inline-block;
+  position: relative;
+  z-index: 20000;
+  overflow: hidden;
+  background-color: #eee;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.superhero__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border: none;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.superhero,
+.superhero__button {
+  width: 160px;
+  height: 160px;
+}
+
+.superhero__button:empty {
+  visibility: visible;
+  width: 160px;
+}
+
+.superhero__name {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.hero__powerstat {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.hero__powerstat--item {
+  margin: 5px;
+}
